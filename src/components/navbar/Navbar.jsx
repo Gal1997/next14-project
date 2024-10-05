@@ -6,8 +6,10 @@ import Links from "./links/Links";
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <div>Logo</div>
-      <Links></Links>
+      <Link href="/" className={styles.logo}>
+        Logo
+      </Link>
+      <Links />
     </div>
   );
 };
