@@ -2,7 +2,12 @@ import React from "react";
 import styles from "./contact.module.css";
 import Image from "next/image";
 
-const page = () => {
+export const metadata = {
+  title: "Contact page",
+  description: "Contact description",
+};
+
+const ContactPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
@@ -27,4 +32,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ContactPage;

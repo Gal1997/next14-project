@@ -8,7 +8,10 @@ const postCard = ({ post }) => {
       <div className={styles.top}>
         <div className={styles.imgContainer}>
           <Image
-            src="https://images.pexels.com/photos/13659374/pexels-photo-13659374.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            src={
+              post.img ||
+              "https://images.pexels.com/photos/13659374/pexels-photo-13659374.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            }
             alt=""
             fill
             className={styles.img}
@@ -19,7 +22,7 @@ const postCard = ({ post }) => {
       <div className={styles.bottom}>
         <h1 className={styles.title}>{post.title}</h1>
         <p className={styles.description}>{post.body}</p>
-        <Link href={"/blog/" + post.id} className={styles.link}>
+        <Link href={"/blog/" + post.slug} className={styles.link}>
           READ MORE
         </Link>
       </div>
